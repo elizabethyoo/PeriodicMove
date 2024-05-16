@@ -1,0 +1,10 @@
+name: periodicmove
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8  # Updated to a version likely available on ARM
+  - pytorch  # Using the general package might help find a compatible version
+  - transformers  # Removing the version might default to the latest available
+  - easydict=1.9  # If this version is unavailable, consider removing the version restriction
+  - matplotlib  # Removing the version might default to the latest available

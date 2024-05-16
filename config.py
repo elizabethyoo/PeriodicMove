@@ -8,18 +8,18 @@ class GeolifConfig:
 
     dataset: str = field(metadata={"help": "string of dataset"}, default="foursquare")
     vocab_path: str = field(metadata={"help": "the path of vocab file"},
-                           default="../datasets/processed/foursquare/v3_delta_0.005_window_size_6_mask_num_10/pos.vocab.txt")
+                           default="./Dataset/v3_delta_0.005_window_size_6_mask_num_10/pos.vocab.txt")
     dist_path: str = field(metadata={"help": "the path of distance file"},
-                          default="../datasets/processed/foursquare/v3_delta_0.005_window_size_6_mask_num_10/vocabs_dist.txt")
+                          default="./Dataset/v3_delta_0.005_window_size_6_mask_num_10/vocabs_dist.txt")
     train_path: str = field(metadata={"help": "the path of training data"},
-                           default="../datasets/processed/foursquare/v3_delta_0.005_window_size_6_mask_num_10/pos.train.txt")
+                           default="./Dataset/v3_delta_0.005_window_size_6_mask_num_10/pos.train.txt")
     eval_path: str = field(metadata={"help": "the path of validation data"},
-                          default="../datasets/processed/foursquare/v3_delta_0.005_window_size_6_mask_num_10/pos.validate.txt")
+                          default="./Dataset/v3_delta_0.005_window_size_6_mask_num_10/pos.validate.txt")
     test_path: str = field(metadata={"help": "the path of testing data"},
-                          default="../datasets/processed/foursquare/v3_delta_0.005_window_size_6_mask_num_10/pos.test.txt")
+                          default="./Dataset/v3_delta_0.005_window_size_6_mask_num_10/pos.test.txt")
     save_dir: str = field(metadata={"help": "the path for saving model"}, default="./save_models/")
     dump_emb_path: str = field(metadata={"help": "the path for saving embedding"},
-                              default="../datasets/processed/foursquare/v3_delta_0.005_window_size_6_mask_num_10/emb_w2i.pkl")
+                              default="./Dataset/v3_delta_0.005_window_size_6_mask_num_10/emb_w2i.pkl")
 
     # training configuration
     device: str = field(metadata={"help": "the running device"}, default="cuda:2")
