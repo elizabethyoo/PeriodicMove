@@ -39,7 +39,7 @@ if __name__ == "__main__":
     model.to(device)
 
     # loss function
-    criterion = nn.NLLLoss().cuda()
+    criterion = nn.NLLLoss().cpu()
     optimizer = optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=config.lr, weight_decay=config.l2)
 
     # train

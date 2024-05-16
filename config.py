@@ -22,7 +22,7 @@ class GeolifConfig:
                               default="./Dataset/v3_delta_0.005_window_size_6_mask_num_10/emb_w2i.pkl")
 
     # training configuration
-    device: str = field(metadata={"help": "the running device"}, default="cuda:2")
+    device: str = field(metadata={"help": "the running device"}, default="cpu")
     epochs: int = field(metadata={"help": "training epochs"}, default=0)
     batch_size: int = field(metadata={"help": "the training/validation/testing batch size"}, default=50)
     dropout_p: float = field(metadata={"help": "dropout rate"}, default=0.3)
