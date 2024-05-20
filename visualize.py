@@ -49,7 +49,7 @@ beijing_lat_range = [34.8, 36.2]
 delta = 0.005
 region = Region(beijing_lon_range, beijing_lat_range, delta)
 
-emb_w2i_dict_path = Path("./save_models/dataset_foursquare_hiddensize_128_nheads_4_distloss_True_dropout_0.3_alpha_0.15_lr_0.0010_nocutdistloss.emb")
+emb_w2i_dict_path = Path("./save_models/dataset_foursquare_hiddensize_128_nheads_4_distloss_True_dropout_0.3_alpha_0.1_lr_0.0010_nopos.emb")
 
 embedding_matrix, w2i_dict = pickle.load(emb_w2i_dict_path.open("rb"))
 i2w_dict = dict([(item[1], item[0]) for item in w2i_dict.items()])
