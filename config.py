@@ -23,7 +23,7 @@ class GeolifConfig:
 
     # training configuration
     device: str = field(metadata={"help": "the running device"}, default="cpu")
-    epochs: int = field(metadata={"help": "training epochs"}, default=0)
+    epochs: int = field(metadata={"help": "training epochs"}, default=50) # default was initially set to 0
     batch_size: int = field(metadata={"help": "the training/validation/testing batch size"}, default=50)
     dropout_p: float = field(metadata={"help": "dropout rate"}, default=0.3)
     step: int = field(metadata={"help": "the steps of GGNN"}, default=1)

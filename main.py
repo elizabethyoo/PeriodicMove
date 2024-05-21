@@ -10,6 +10,7 @@ from train import train
 from test import test
 import pickle
 from pathlib import Path
+import os 
 
 
 if __name__ == "__main__":
@@ -19,6 +20,8 @@ if __name__ == "__main__":
     print(config)
 
     set_seed(config.seed)
+    if not os.path.exists(config.save_dir):
+        os.makedirs(config.save_dir)
     config.save_path = Path(config.save_dir) / "dataset_{}_hiddensize_{}_nheads_{}_distloss_{}_dropout_{}_alpha_{}_lr_{:.4f}_nopos.chkpt".format(config.dataset, config.hidden_size, config.cross_n_heads, config.dist_loss, config.dropout_p, config.alpha, config.lr)
 
     w2i_dict = load_w2ifile(config.vocab_path)
